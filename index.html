@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Maria Mu&ntilde;oz</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    div {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    h1 {
+      font-size: 30vmin;
+      margin: 0;
+      text-transform: uppercase;
+      line-height: 45vmin;
+      cursor: pointer;
+    }
+
+    h1 span {
+      transition: color 1s;
+    }
+
+    h1 span:hover, h1 span.hover {
+      color: #ff4c6b;
+    }
+
+    ul {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    li + li:before {
+      content: ' - ';
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    a {
+      color: #888;
+      text-decoration: none;
+      transition: color 1s;
+    }
+
+    a:hover {
+      color: #ff4c6b;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>
+      <span>M</span>a<span>ri</span>a
+      <br>
+      M<span>u&ntilde;</span>o<span>z</span>
+    </h1>
+
+    <ul>
+      <li><a href="http://cv.marifermunoz.com/"><i class="fa fa-address-card-o"></i></a></li>
+      <li><a href="https://linkedin/marifer22"><i class="fa fa-linkedin"></i></a></li>
+      <li><a href="https://github.com/marifer22"><i class="fa fa-github-alt"></i></a></li>
+      <li><a href="mailto:hi@marifermunoz.com"><i class="fa fa-envelope"></i></a></li>
+    </ul>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      Array
+        .from(document.querySelectorAll('h1 span'))
+        .forEach(el => {
+          setInterval(() => {
+            el.classList.toggle('hover');
+
+            setTimeout(() => el.classList.toggle('hover'), 1000);
+          }, Math.round((Math.random() + 1) * 2500));
+        });
+    }, 2000);
+  </script>
+</body>
+</html>
